@@ -20,9 +20,9 @@ class _ColorChangingTextBoxState extends State<ColorChangingTextBox> {
         });
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 6,vertical: 5),
+        padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
         margin: EdgeInsets.symmetric(horizontal: 6,vertical: 5),
-        width: 100,
+        
         height: 40,
         decoration: BoxDecoration(
           color: isSelected ? MyColors().primaryColor : Colors.white,

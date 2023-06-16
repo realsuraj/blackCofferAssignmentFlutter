@@ -14,21 +14,21 @@ class _MyCardsState extends State<MyCards> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.symmetric(vertical: 5),
       height: 280,
       width: MediaQuery.of(context).size.width,
      
         child: Stack(
           children: [
             Container(
-              margin: const EdgeInsets.all(20),
+             margin: const EdgeInsets.only(top: 5,left: 20),
               child: Card(
                 elevation: 10,
                 child: 
               Container(
                 height: 270,
                 width:   MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(16)),
+                decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(25)),
               ),),
             ),
 
@@ -66,8 +66,11 @@ class _MyCardsState extends State<MyCards> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                   Text(widget.name,style: TextStyle(fontWeight: FontWeight.bold, color: MyColors().primaryColor),),
+                  SizedBox(height: 3,),
                   Text(widget.location,style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black54),),
+                  SizedBox(height: 3,),
                   Text(widget.distance,style: TextStyle(fontWeight: FontWeight.bold, color: MyColors().primaryColor),),
+                  SizedBox(height: 3,),
                   Container(
                     decoration: BoxDecoration(color: Colors.grey.shade400,
                     borderRadius: BorderRadius.circular(15)),
@@ -86,7 +89,7 @@ class _MyCardsState extends State<MyCards> {
 
             Positioned(
               left: 48,
-              bottom: 60,
+              bottom: 55,
               child: SizedBox(
               width: 200,
               child: Column(

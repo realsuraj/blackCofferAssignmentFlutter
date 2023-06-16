@@ -1,6 +1,7 @@
 import 'package:assignment/color.dart';
 import 'package:assignment/textcolormagic.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 class ScreenExplorer extends StatefulWidget {
   const ScreenExplorer({super.key});
@@ -37,7 +38,7 @@ class _ScreenExplorerState extends State<ScreenExplorer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+resizeToAvoidBottomInset: false, 
       appBar: AppBar(
         backgroundColor: MyColors().primaryColor,
         leading: IconButton(
@@ -149,6 +150,7 @@ class _ScreenExplorerState extends State<ScreenExplorer> {
        showLabels: false,
        enableTooltip: true,
        shouldAlwaysShowTooltip: true,
+       
        onChanged: (dynamic value){
          setState(() {
            _value = value;
@@ -176,18 +178,34 @@ class _ScreenExplorerState extends State<ScreenExplorer> {
                 fontWeight: FontWeight.bold,
                 color: MyColors().primaryColor
               ),),
-            Wrap(
-              spacing: 8.0,
-              children: [
-               ColorChangingTextBox(text: "coffee",),
-               ColorChangingTextBox(text: "Business",),
-               ColorChangingTextBox(text: "hobbies",),
-               ColorChangingTextBox(text: "Friendship",),
-               ColorChangingTextBox(text: "Movie",),
-               ColorChangingTextBox(text: "Dinning",),
-               ColorChangingTextBox(text: "Dating",),
-               ColorChangingTextBox(text: "Matrimony",),
-              ],
+            Container(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                  ColorChangingTextBox(text: "coffee",),
+                 ColorChangingTextBox(text: "Business",),
+                 ColorChangingTextBox(text: "hobbies",),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                 ColorChangingTextBox(text: "Friendship",),
+                 ColorChangingTextBox(text: "Movie",),
+                 ColorChangingTextBox(text: "Dinning",),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      ColorChangingTextBox(text: "Dating",),
+                 ColorChangingTextBox(text: "Matrimony",),
+                    ],
+                  )
+                 
+               
+                 
+                ],
+              ),
             ),
             SizedBox(height: 20,),
             Container(

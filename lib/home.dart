@@ -20,33 +20,36 @@ class _MyHomeState extends State<MyHome> {
             
             children: 
             [
-              Row(
-                children: [
-                 
-        Container(
-          margin: EdgeInsets.all(10),
-          height: 40,
-          width: MediaQuery.of(context).size.width * 0.8,
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: TextField(
-            decoration: InputDecoration(
-              hintText: 'Search',
-              hintStyle: TextStyle(color: Colors.black45, height: 4),
-              prefixIcon: IconButton(
-                icon: Icon(Icons.search,color: Colors.black38,),
-                onPressed: () {
-                },
-              ),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-            ),
-          ),
-        ),
-           Image.asset("assets/home_filter.png",height: 50,),],
-
-           
-
+              Container(
+                 width: MediaQuery.of(context).size.width,
+                child: Row(
+                  children: [
+                   
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        height: 40,
+                        width: MediaQuery.of(context).size.width * 0.7,
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                hintText: 'Search',
+                hintStyle: TextStyle(color: Colors.black45, height: 4),
+                prefixIcon: IconButton(
+                  icon: Icon(Icons.search,color: Colors.black38,),
+                  onPressed: () {
+                  },
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                          ),
+                        ),
+                      ),
+                         Image.asset("assets/home_filter.png",height: 50,),],
+              
+                         
+              
+                ),
               ),
                
                 ListView(
