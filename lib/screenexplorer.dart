@@ -13,7 +13,7 @@ class ScreenExplorer extends StatefulWidget {
 
 class _ScreenExplorerState extends State<ScreenExplorer> {
 
-    String currentSelectedValue = "busy";
+    String currentSelectedValue = "available";
     double _value = 0.0;
     var txt = TextEditingController();  
     TextEditingController _textEditingController = TextEditingController(text: "Hi Community! I am open for new connections \n \" 🙂 \"");
